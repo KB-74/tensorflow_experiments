@@ -1,0 +1,8 @@
+.idea/
+env/
+.Python
+bin/
+include/
+lib/
+pip-selfcheck.json
+/log/**/*
