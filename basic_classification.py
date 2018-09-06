@@ -22,10 +22,13 @@ print('shape of test set is: ' + str(test_images.shape))
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
-# Computational machine learning model met twee hidden layers
+# Computational machine learning model met twee hidden layers van 128 en 10 neurons
 model = keras.Sequential([
+    # De eerste laag in het model verandert de 2d input naar een 1d array
     keras.layers.Flatten(input_shape=(28, 28)),
+    # eerste hidden layer met 128 neurons
     keras.layers.Dense(128, activation=tf.nn.relu),
+    # tweede hidden layer met 10 neurons
     keras.layers.Dense(10, activation=tf.nn.softmax)
 ])
 
