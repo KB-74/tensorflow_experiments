@@ -3,6 +3,8 @@
 import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow import keras
+from PIL import Image
+import numpy as np
 
 # importeer de mnist bibliotheek met testafbeeldingen
 fashion_mnist = keras.datasets.fashion_mnist
@@ -16,6 +18,7 @@ train_images = train_images / 255.0
 test_images = test_images / 255.0
 
 print('shape of training set is: ' + str(train_images.shape))
+print('shape of one image of the training set is: ' + str(train_images[0].shape))
 print('shape of test set is: ' + str(test_images.shape))
 
 # bijbehoorende catahorie namen
@@ -43,4 +46,5 @@ model.fit(train_images, train_labels, epochs=5)
 # getting all the metrics
 test_loss, test_acc = model.evaluate(test_images, test_labels)
 
-print('Test accuracy:', test_acc)
+model.save_weights('./models/kleren.h5')
+
