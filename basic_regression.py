@@ -1,7 +1,5 @@
 import pandas as pd
-from sklearn import datasets
 import tensorflow as tf
-import itertools
 
 COLUMNS = ["crim", "zn", "indus", "nox", "rm", "age",
            "dis", "tax", "ptratio", "medv"]
