@@ -6,3 +6,5 @@ include/
 lib/
 pip-selfcheck.json
 /log/**/*
+venv/**/*
+models/**/*
